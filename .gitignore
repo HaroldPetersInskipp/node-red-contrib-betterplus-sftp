@@ -1,3 +1,10 @@
+package-lock.json
+
+# Backups
+*.backup
+*.bak
+*.old
+
 # Logs
 logs
 *.log
