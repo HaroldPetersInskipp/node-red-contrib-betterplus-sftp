@@ -1,5 +1,7 @@
 # node-red-contrib-betterplus-sftp
 
+This is a fork of `node-red-contrib-better-sftp`
+
 Betterplus SFTP was created out of necessity for a SFTP node which 
 was fully implemented and had several options to configure algorithms (and "somewhat" up-to-date dependencies).
 
