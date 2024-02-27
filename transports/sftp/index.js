@@ -152,15 +152,16 @@ module.exports = function (RED) {
                                 node.send(msg);
                                 break;
                             case 'put':
-                                let putFtpFileName = path.join(node.workdir, node.filename);
-                                // if (msg.payload.filename) putFtpFileName = path.join(node.workdir, msg.payload.filename);
-
-                                let put = await sftp.uploadDir(msg.payload.data, putFtpFileName);
-                                
-
+								let putFtpFileName = node.workdir + '/' + node.filename;
+                                if (msg.payload.filename) putFtpFileName = node.workdir + '/' +  msg.payload.filename;
+								
+								putFtpFileName = putFtpFileName;
+								
+                                let put = await sftp.put(msg.payload.data, putFtpFileName);
+								
                                 msg.payload = put;
                                 node.send(msg);
-                                break;
+								break;
                             case 'delete':
                                 let delFtpFileName = path.join(node.workdir, node.filename);
                                 if (msg.payload) delFtpFileName = msg.payload;
