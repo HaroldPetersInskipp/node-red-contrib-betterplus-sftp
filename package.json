@@ -1,6 +1,6 @@
 {
     "name": "node-red-contrib-betterplus-sftp",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A betterplus node for SFTP communication.",
     "main": "transports/sftp/index.js",
     "scripts": {
@@ -35,6 +35,6 @@
     },
     "homepage": "https://github.com/HaroldPetersInskipp/node-red-contrib-betterplus-sftp#readme",
     "dependencies": {
-        "ssh2-sftp-client": "^9.0.2"
+        "ssh2-sftp-client": "^11.0.0"
     }
 }
